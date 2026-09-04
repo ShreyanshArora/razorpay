@@ -51,7 +51,9 @@ export interface EvalResults {
   }>;
 }
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 const j = async (u: string, o?: RequestInit) => {
+  u = API_BASE + u;
   const r = await fetch(u, o); if (!r.ok) throw new Error(`${u} ${r.status}`); return r.json();
 };
 export const api = {

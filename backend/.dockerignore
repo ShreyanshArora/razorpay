@@ -1,0 +1,6 @@
+.venv/
+_scratch/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/ring_scorer.pkl
