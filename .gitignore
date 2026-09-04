@@ -1,0 +1,37 @@
+# ---- Python / backend ----
+backend/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.python-version
+# generated model artifact (rebuilt by check.sh / on API startup)
+backend/data/ring_scorer.pkl
+# scratch / experiments
+backend/_scratch/
+_scratch/
+
+# ---- Node / frontend ----
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+npm-debug.log*
+yarn-error.log*
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- env / secrets ----
+.env
+.env.local
+*.local
+
+# ---- misc generated ----
+frontend/tsconfig.tsbuildinfo
+backend/.pytest_cache/

@@ -1,0 +1,31 @@
+/* NEXUS Risk Console — Razorpay light theme (Prussian navy rail + Dodger blue) */
+:root{
+  --ground:#EEF3FA; --panel:#FFFFFF; --navy:#071A33; --navy-2:#0C2444; --navy-3:#12335C;
+  --ink:#0A2540; --ink-2:#425A78; --ink-3:#8091A8;
+  --brand:#0D94FB; --brand-2:#0A6FC2; --brand-glow:rgba(13,148,251,.4); --brand-wash:rgba(13,148,251,.10);
+  --crit:#E5484D; --crit-glow:rgba(229,72,77,.5); --crit-wash:rgba(229,72,77,.08);
+  --clear:#12B981; --clear-glow:rgba(18,185,129,.4); --clear-wash:rgba(18,185,129,.10);
+  --warn:#E08600; --warn-wash:rgba(224,134,0,.10);
+  --brd:#E3E9F2; --brd-2:#D2DBE8;
+  --shadow:0 1px 2px rgba(10,37,64,.05),0 10px 30px rgba(10,37,64,.07);
+  --radius:16px; --radius-sm:10px;
+  --font-sans:'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{box-sizing:border-box;}
+html,body{padding:0;margin:0;}
+body{background:var(--ground);color:var(--ink);font-family:var(--font-sans);
+  background-image:radial-gradient(1000px 600px at 92% -10%,rgba(13,148,251,.10),transparent 60%);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01";}
+a{color:inherit;text-decoration:none;}
+.tnum{font-variant-numeric:tabular-nums;} .mono{font-family:var(--font-mono);}
+.card{border-radius:var(--radius);background:var(--panel);border:1px solid var(--brd);box-shadow:var(--shadow);}
+button{font-family:var(--font-sans);}
+::-webkit-scrollbar{width:8px;height:8px;} ::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--brd-2);border-radius:8px;} ::-webkit-scrollbar-thumb:hover{background:var(--brand);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+@keyframes slideIn{to{opacity:1;transform:none;}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.35;}}
+.rise{animation:fadeUp .4s cubic-bezier(.2,.8,.2,1) both;}
+.pulse-dot{width:7px;height:7px;border-radius:999px;background:var(--clear);box-shadow:0 0 8px var(--clear);display:inline-block;animation:blink 1.6s infinite;}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;}}

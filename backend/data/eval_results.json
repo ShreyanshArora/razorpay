@@ -1,0 +1,93 @@
+{
+  "dev_summary": {
+    "seed": 42,
+    "split": "dev",
+    "accounts": 1057,
+    "transactions": 2658,
+    "account_populations": {
+      "normal": 700,
+      "ring_obvious": 92,
+      "ring_evasive": 105,
+      "lookalike": 160
+    },
+    "fraud_rings": 25,
+    "legit_clusters": 38,
+    "disputed_txns": 197
+  },
+  "test_summary": {
+    "seed": 7,
+    "split": "test",
+    "accounts": 1044,
+    "transactions": 2664,
+    "account_populations": {
+      "normal": 700,
+      "ring_obvious": 82,
+      "ring_evasive": 109,
+      "lookalike": 153
+    },
+    "fraud_rings": 25,
+    "legit_clusters": 38,
+    "disputed_txns": 184
+  },
+  "test_clusters_detected": 151,
+  "tuned_threshold": 0.05,
+  "feature_importance": {
+    "txn_span_min": 0.9003,
+    "dispute_ratio": 0.0995,
+    "mean_amount": 0.0002,
+    "size": 0.0,
+    "txns_per_account": 0.0,
+    "near_threshold_ratio": 0.0,
+    "creation_span_min": 0.0,
+    "amount_cv": 0.0,
+    "fail_ratio": 0.0,
+    "creation_burst_density": 0.0
+  },
+  "methods": {
+    "baseline_structural": {
+      "method": "baseline_structural",
+      "threshold": 0.5,
+      "tp": 12,
+      "fp": 125,
+      "fn": 14,
+      "tn": 0,
+      "precision": 0.0876,
+      "recall": 0.4615,
+      "f1": 0.1472,
+      "recall_obvious": 1.0,
+      "recall_evasive": 0.0,
+      "legit_accounts_hit": 512,
+      "legit_clusters_flagged": 125
+    },
+    "nexus_ml_default": {
+      "method": "nexus_ml_default",
+      "threshold": 0.5,
+      "tp": 26,
+      "fp": 0,
+      "fn": 0,
+      "tn": 125,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "recall_obvious": 1.0,
+      "recall_evasive": 1.0,
+      "legit_accounts_hit": 0,
+      "legit_clusters_flagged": 0
+    },
+    "nexus_ml_tuned": {
+      "method": "nexus_ml_tuned",
+      "threshold": 0.05,
+      "tp": 26,
+      "fp": 0,
+      "fn": 0,
+      "tn": 125,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "recall_obvious": 1.0,
+      "recall_evasive": 1.0,
+      "legit_accounts_hit": 0,
+      "legit_clusters_flagged": 0
+    }
+  }
+}
